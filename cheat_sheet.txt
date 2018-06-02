@@ -28,3 +28,9 @@ for p in Post.objects.all():
 # Create template <html>
 # Can now reference in other html file example: 
     <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+    
+fragt den Stadt
+open Knowledge foundation
+
+
+Django CMS : wagtail

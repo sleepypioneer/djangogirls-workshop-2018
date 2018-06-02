@@ -24,8 +24,10 @@ SECRET_KEY = '+0alij0wyv$c_)mxwmv90()o-9qa=21^(f3r1==54z#17*@6)z'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+# If debug false run server with <python manage.py runserver --insecure>
 
 ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
+#ALLOWED_HOSTS = ["*"]
 
 
 # Application definition

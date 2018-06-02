@@ -17,3 +17,14 @@ Print(Post.objects.all().query) # see SQL query Django ran
 for p in Post.objects.all():
     ...:     print(p.title)
 
+    
+    
+# Add to urls.py
+    url(r'^post/(?P<pk>\d+)/$', views.post_detail, name='post_detail')
+# Add to views.py 
+    def post_detail(request, pk):
+        post = get_object_or_404(Post, pk=pk)
+        return render(request, 'blog/post_detail.html', {'post': post})
+# Create template <html>
+# Can now reference in other html file example: 
+    <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
